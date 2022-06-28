@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Urbanist-Bold";
+    src: url(assets/fonts/Urbanist-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist-Medium";
+    src: url(assets/fonts/Urbanist-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist-Regular";
+    src: url(assets/fonts/Urbanist-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist-Light";
+    src: url(assets/fonts/Urbanist-Light.ttf);
+}
+
+.text-bold {
+    font-family: "Urbanist-Bold";
+    font-size: 20px;
+}
+.text-medium {
+    font-family: "Urbanist-Medium";
+    font-size: 16px;
+}
+.text-regular {
+    font-family: "Urbanist-Regular";
+    font-size: 14px;
+}
+.text-light {
+    font-family: "Urbanist-Light";
+    font-size: 12px;
+}
+
+:root {
+    --green: #7FB800;
+    --blue: #00A6ED;
+    --red: #F6511D;
+    --gray: #D9D9D9;
+    --gray-light: #EBEBEB;
+    --gray-dark: #CCCCCC;
+  }
+
+body {
+    background: var(--gray-light);
+}
