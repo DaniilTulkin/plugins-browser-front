@@ -1,0 +1,147 @@
+@keyframes flip {
+    0% { margin-top: 0px;  }
+    50% { margin-top: 0px;  }
+    100% { margin-top: -25px; }
+}
+
+
+.container-1 {
+    .container-1-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .container-1-1-1 {
+            height: 24px;
+            overflow: hidden;
+            .container-1-1-1-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                animation: flip 2s forwards;
+                span {
+                    color: var(--blue);               
+                }
+            }
+        }
+        input {
+            width: 262px;
+            height: 30px;
+            margin: 5px;
+
+            border: 0px;
+            background: #D9D9D9;
+            border-radius: 10px;
+
+            text-align: center;
+            &:focus{
+                outline: none;
+            }
+        }
+        .container-1-1-2 {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(5, 1fr);
+            .container-1-1-2-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+                padding: 5px 10px 8px 10px;
+
+                background: #D9D9D9;
+                border-radius: 10px;
+                div:nth-child(1) {
+                    font-size: 40px;
+                }
+                div:nth-child(2) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .container-1-2 {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5px;
+        top: 0px;
+        right: 12px;
+        button {            
+            width: 50px;
+            height: 20px;
+
+            background: #D9D9D9;
+            border: 0px;
+            border-radius: 10px;
+            &:active {
+                background: #EBEBEB;
+            }
+            &:nth-child(1) {
+                // &:hover {
+                //     border: 2px solid var(--blue);
+                //     animation: maskBorder 1.4s infinite;
+                // }
+            }
+            &:nth-child(2) {
+                &:hover {
+                    border: 2px solid var(--red);
+                }
+            }
+        }
+    }
+}
+
+.spin {
+    
+    &:hover {
+      color: red;
+    }
+  
+    &::before,
+    &::after {
+      top: 0;
+      left: 0;
+    }
+  
+    &::before {
+      border: 2px solid transparent; // We're animating border-color again
+    }
+  
+    &:hover::before {
+      border-top-color: red; // Show borders
+      border-right-color: red;
+      border-bottom-color: red;
+  
+      transition:
+        border-top-color 0.15s linear, // Stagger border appearances
+        border-right-color 0.15s linear 0.10s,
+        border-bottom-color 0.15s linear 0.20s;
+    }
+  
+    &::after {
+      border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+    }
+  
+    &:hover::after {
+      border-top: 2px solid red; // Shows border
+      border-left-width: 2px; // Solid edges, invisible borders
+      border-right-width: 2px; // Solid edges, invisible borders
+      transform: rotate(270deg); // Rotate around circle
+      transition:
+        transform 0.4s linear 0s,
+        border-left-width 0s linear 0.35s; // Solid edge post-rotation
+    }
+}
+
+.circle {
+    border-radius: 100%;
+    box-shadow: none;
+        
+    &::before,
+    &::after {
+        border-radius: 100%;
+    }
+}

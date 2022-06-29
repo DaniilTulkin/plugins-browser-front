@@ -1,0 +1,30 @@
+<div class="container-1">
+    <div class="container-1-1">
+        <div class="container-1-1-1">
+            <div class="container-1-1-1-1">
+                <div class="text-bold">
+                    Plugins 
+                    <span>Browser</span>
+                </div>
+                <div class="text-bold">
+                    Hello, 
+                    <span>User!</span>
+                </div>
+            </div>
+        </div>
+        <input class="text-regular"
+            type="text"
+            placeholder="Search plugin">
+        <div class="container-1-1-2">
+            <div class="container-1-1-2-1"
+                *ngFor="let plugin of plugins">
+                <div class="text-bold">{{plugin.shortName}}</div>
+                <div class="text-regular">{{plugin.name}}</div>                
+            </div>
+        </div>
+    </div>
+    <div class="container-1-2">
+        <button class="spin cercle"></button>
+        <button></button>
+    </div>
+</div>

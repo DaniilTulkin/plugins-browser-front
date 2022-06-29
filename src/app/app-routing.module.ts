@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PluginsBrowserComponent } from './plugins-browser/components/plugins-browser.component';
 
-import { PluginsBrowserComponent } from './plugins-browser/plugins-browser.component';
 import { RoutersEnum } from './shared/enums/routers.anum';
 
 const routes: Routes = [

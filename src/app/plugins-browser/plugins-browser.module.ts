@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PluginsBrowserRoutingModule } from './plugins-browser-routing.module';
-import { PluginsBrowserComponent } from './plugins-browser.component';
+import { PluginsBrowserComponent } from './components/plugins-browser.component';
 
 
 @NgModule({
