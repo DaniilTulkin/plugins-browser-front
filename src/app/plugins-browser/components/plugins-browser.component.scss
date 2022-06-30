@@ -4,7 +4,6 @@
     100% { margin-top: -25px; }
 }
 
-
 .container-1 {
     .container-1-1 {
         display: flex;
@@ -69,79 +68,30 @@
         column-gap: 5px;
         top: 0px;
         right: 12px;
-        button {            
-            width: 50px;
-            height: 20px;
+        border-radius: 10px;
 
-            background: #D9D9D9;
-            border: 0px;
-            border-radius: 10px;
+        button {
             &:active {
                 background: #EBEBEB;
             }
             &:nth-child(1) {
-                // &:hover {
-                //     border: 2px solid var(--blue);
-                //     animation: maskBorder 1.4s infinite;
-                // }
             }
             &:nth-child(2) {
-                &:hover {
-                    border: 2px solid var(--red);
-                }
             }
         }
     }
 }
 
-.spin {
-    
-    &:hover {
-      color: red;
-    }
-  
-    &::before,
-    &::after {
-      top: 0;
-      left: 0;
-    }
-  
-    &::before {
-      border: 2px solid transparent; // We're animating border-color again
-    }
-  
-    &:hover::before {
-      border-top-color: red; // Show borders
-      border-right-color: red;
-      border-bottom-color: red;
-  
-      transition:
-        border-top-color 0.15s linear, // Stagger border appearances
-        border-right-color 0.15s linear 0.10s,
-        border-bottom-color 0.15s linear 0.20s;
-    }
-  
-    &::after {
-      border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
-    }
-  
-    &:hover::after {
-      border-top: 2px solid red; // Shows border
-      border-left-width: 2px; // Solid edges, invisible borders
-      border-right-width: 2px; // Solid edges, invisible borders
-      transform: rotate(270deg); // Rotate around circle
-      transition:
-        transform 0.4s linear 0s,
-        border-left-width 0s linear 0.35s; // Solid edge post-rotation
-    }
-}
 
-.circle {
-    border-radius: 100%;
-    box-shadow: none;
-        
-    &::before,
-    &::after {
-        border-radius: 100%;
+ 
+.shape {
+    stroke-dasharray:  0 150;
+    stroke-dashoffset: -76;
+    stroke: #19f6e8;
+    transition: stroke-dashoffset 1s, stroke-dasharray 1s;
+    &:hover {
+        stroke-width: 2px;
+        stroke-dashoffset: -15;
+        stroke-dasharray: 120 0;
     }
 }
