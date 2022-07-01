@@ -4,7 +4,9 @@
     100% { margin-top: -25px; }
 }
 
-.container-1 {
+.plugins-browser {
+    width: 700px;
+    height: 400px;
     .container-1-1 {
         display: flex;
         flex-direction: column;
@@ -17,9 +19,33 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                animation: flip 2s forwards;
+                animation: flip 1s forwards;
                 span {
                     color: var(--blue);               
+                }
+                .container-1-1-1-1-1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    svg {
+                        width: 22px;
+                        height: 22px;
+                        margin-left: 5px;
+                        circle {
+                            fill: #D9D9D9;
+                            &:active {
+                                fill: #EBEBEB;
+                            }
+                            stroke-dasharray:  0, 65;
+                            stroke-width: 2px;
+                            transition: stroke-dashoffset .2s, stroke-dasharray .2s;
+                            &:hover {
+                                stroke: var(--blue);
+                                stroke-width: 2px;
+                                stroke-dasharray: 32, 32;
+                            }
+                        }            
+                    }
                 }
             }
         }
@@ -41,24 +67,90 @@
             display: grid;
             grid-auto-flow: row;
             grid-template-columns: repeat(5, 1fr);
-            .container-1-1-2-1 {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+            .container-1-1-2-1 { 
                 width: 100px;
-                height: 100px;
-                margin: 5px;
-                padding: 5px 10px 8px 10px;
+                height: 100px; 
+                margin: 5px;   
+                overflow: hidden;  
+                .container-1-1-2-1-1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: calc(100% - 20px);
+                    height: calc(100% - 13px); 
+                    padding: 5px 10px 8px 10px;
 
-                background: #D9D9D9;
-                border-radius: 10px;
-                div:nth-child(1) {
-                    font-size: 40px;
+                    background: #D9D9D9;
+                    border-radius: 10px;
+                    div:nth-child(1) {
+                        font-size: 40px;
+                    }
+                    div:nth-child(2) {
+                        width: 80%;
+                    }
                 }
-                div:nth-child(2) {
-                    width: 80%;
+                .container-1-1-2-1-2 {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;  
+                    top: 0px;
+
+                    transition: all .2s linear;
+                    svg {
+                        width: 92px; 
+                        height: 32px;
+                        rect {
+                            fill: #D9D9D9;
+                            stroke-dasharray:  0, 250;
+                            stroke-dashoffset: -135;
+                            stroke-width: 2px;
+                            transition: stroke-dashoffset .2s, stroke-dasharray .2s;
+                        }
+                        text {
+                            text-anchor: middle;
+                            dominant-baseline: middle;
+                        }
+                        &:hover {
+                            rect {
+                                stroke-width: 2px;
+                                stroke-dashoffset: -35;
+                                stroke-dasharray: 250, 0;
+                            }
+                        }
+                        &:active {
+                            rect {
+                                fill: #EBEBEB;
+                            }
+                        }
+                    }
+                    svg:nth-child(1) {
+                        &:hover {
+                            rect {
+                                stroke: var(--green);
+                            }
+                        }
+                    }    
+                    svg:nth-child(2) {
+                        &:hover {
+                            rect {
+                                stroke: var(--blue);
+                            }
+                        }
+                    }  
                 }
-            }
+                &:hover {                    
+                    .container-1-1-2-1-1 {
+                        opacity: 0.5;
+                    }
+                    .container-1-1-2-1-2 {
+                        top: -100px;
+                    }
+                }
+            }            
         }
     }
     .container-1-2 {
@@ -70,28 +162,38 @@
         right: 12px;
         border-radius: 10px;
 
-        button {
-            &:active {
-                background: #EBEBEB;
+        svg {
+            width: 52px;
+            height: 52px;
+            rect {
+                fill: #D9D9D9;
+                &:active {
+                    fill: #EBEBEB;
+                }
+                stroke-dasharray:  0 150;
+                stroke-dashoffset: -76;
+                stroke-width: 2px;
+                transition: stroke-dashoffset 0.2s, stroke-dasharray 0.2s;
+                &:hover {
+                    stroke-width: 2px;
+                    stroke-dashoffset: -15;
+                    stroke-dasharray: 120 0;
+                }
+            }            
+        }    
+        svg:nth-child(1) {
+            rect {
+                &:hover {
+                    stroke: var(--blue);
+                }
             }
-            &:nth-child(1) {
+        }    
+        svg:nth-child(2) {
+            rect {
+                &:hover {
+                    stroke: var(--red);
+                }
             }
-            &:nth-child(2) {
-            }
-        }
-    }
-}
-
-
- 
-.shape {
-    stroke-dasharray:  0 150;
-    stroke-dashoffset: -76;
-    stroke: #19f6e8;
-    transition: stroke-dashoffset 1s, stroke-dasharray 1s;
-    &:hover {
-        stroke-width: 2px;
-        stroke-dashoffset: -15;
-        stroke-dasharray: 120 0;
+        }   
     }
 }

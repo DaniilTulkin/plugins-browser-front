@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+import { EventsEnum } from 'src/app/shared/enums/events.enum';
+import { PluginsService } from 'src/app/shared/services/plugins.service';
+import { WebView2Service } from 'src/app/shared/services/webview2.service';
 import { Plugin } from '../interfaces/plugin.interface';
 
 @Component({
@@ -29,7 +33,7 @@ export class PluginsBrowserComponent implements OnInit {
     },
     {
       shortName: "Ei",
-      name: "Excel import and export",
+      name: "Excel imp/exp",
       description: "",
       dllName: "ExcelImportExport"
     },
@@ -65,9 +69,13 @@ export class PluginsBrowserComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private pluginsService: PluginsService) { }
 
   ngOnInit(): void {
+    this.pluginsService.resizeWindow("plugins-browser")
   }
-
+  
+  close() {
+    this.pluginsService.close();
+  }
 }

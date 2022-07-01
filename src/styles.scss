@@ -47,4 +47,6 @@
 body {
     margin: 0px;
     background: var(--gray-light);
+    user-select: none;
+    overflow: hidden;
 }

@@ -1,4 +1,4 @@
-<div class="container-1">
+<div class="plugins-browser">
     <div class="container-1-1">
         <div class="container-1-1-1">
             <div class="container-1-1-1-1">
@@ -6,9 +6,12 @@
                     Plugins 
                     <span>Browser</span>
                 </div>
-                <div class="text-bold">
+                <div class="text-bold container-1-1-1-1-1">
                     Hello, 
                     <span>User!</span>
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="10" />
+                    </svg>
                 </div>
             </div>
         </div>
@@ -18,17 +21,30 @@
         <div class="container-1-1-2">
             <div class="container-1-1-2-1"
                 *ngFor="let plugin of plugins">
-                <div class="text-bold">{{plugin.shortName}}</div>
-                <div class="text-regular">{{plugin.name}}</div>                
+                <div class="container-1-1-2-1-1">
+                    <div class="text-bold">{{plugin.shortName}}</div>
+                    <div class="text-regular">{{plugin.name}}</div> 
+                </div>
+                <div class="container-1-1-2-1-2">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="90" height="30" rx="10"/>
+                        <text class="text-regular" x="50%" y="50%">Run</text>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="90" height="30" rx="10"/>
+                        <text class="text-regular" x="50%" y="50%">Information</text>
+                    </svg>  
+                </div>               
             </div>
         </div>
     </div>
     <div class="container-1-2">
-        <svg width="50" height="20" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="50" height="20" rx="10" fill="#D9D9D9" class="shape"/>
+        <svg  xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="50" height="20" rx="10" />
         </svg>
-        <svg width="50" height="20" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="50" height="20" rx="10" fill="#D9D9D9" class="shape"/>
+        <svg xmlns="http://www.w3.org/2000/svg"
+            (click)="close()">
+            <rect x="1" y="1" width="50" height="20" rx="10" />
         </svg>       
     </div>
 </div>
