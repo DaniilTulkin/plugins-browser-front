@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { EventsEnum } from 'src/app/shared/enums/events.enum';
 import { PluginsService } from 'src/app/shared/services/plugins.service';
-import { WebView2Service } from 'src/app/shared/services/webview2.service';
-import { Plugin } from '../interfaces/plugin.interface';
+import { Plugin } from './interfaces/plugin.interface';
 
 @Component({
   selector: 'app-plugins-browser',
@@ -73,9 +71,5 @@ export class PluginsBrowserComponent implements OnInit {
 
   ngOnInit(): void {
     this.pluginsService.resizeWindow("plugins-browser")
-  }
-  
-  close() {
-    this.pluginsService.close();
   }
 }
