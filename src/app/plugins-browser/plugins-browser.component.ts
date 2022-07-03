@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 import { PluginsService } from 'src/app/shared/services/plugins.service';
 import { Plugin } from './interfaces/plugin.interface';
@@ -66,10 +67,17 @@ export class PluginsBrowserComponent implements OnInit {
       dllName: "CreateSheets"
     }
   ];
+  plugin$: BehaviorSubject<Plugin> = new BehaviorSubject<Plugin>(null);
 
   constructor(private pluginsService: PluginsService) { }
 
   ngOnInit(): void {
     this.pluginsService.resizeWindow("plugins-browser")
+  }
+
+  toggleInfo(plugin: Plugin) {
+    if (this.plugin$.value === plugin) 
+      this.plugin$.next(null);
+    else this.plugin$.next(plugin)
   }
 }

@@ -42,6 +42,8 @@
     --gray: #D9D9D9;
     --gray-light: #EBEBEB;
     --gray-dark: #CCCCCC;
+
+    --animation-duration: .2s;
   }
 
 body {
@@ -49,4 +51,28 @@ body {
     background: var(--gray-light);
     user-select: none;
     overflow: hidden;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track { 
+    border: none;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: var(--blue);
+}
+::-webkit-scrollbar-track {
+    background-size: contain;
+}
+::-webkit-scrollbar:vertical,
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-track:vertical { 
+    width: 2px;
+}
+::-webkit-scrollbar:horizontal,
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-track:horizontal { 
+    height: 2px;
 }

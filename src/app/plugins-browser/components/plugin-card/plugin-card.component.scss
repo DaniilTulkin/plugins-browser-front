@@ -30,7 +30,7 @@
         height: 100%;  
         top: 0px;
     
-        transition: all .2s linear;
+        transition: all var(--animation-duration) linear;
         svg {
             width: 92px; 
             height: 32px;
@@ -39,11 +39,10 @@
                 stroke-dasharray:  0, 250;
                 stroke-dashoffset: -135;
                 stroke-width: 2px;
-                transition: stroke-dashoffset .2s, stroke-dasharray .2s;
+                transition: stroke-dashoffset var(--animation-duration), stroke-dasharray var(--animation-duration);
             }
             text {
                 text-anchor: middle;
-                dominant-baseline: middle;
             }
             &:hover {
                 rect {

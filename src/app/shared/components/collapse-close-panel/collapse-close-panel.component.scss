@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5px;
     top: 0px;
-    right: 12px;
+    right: 8px;
     border-radius: 10px;
 
     svg {
@@ -18,7 +18,7 @@
             stroke-dasharray:  0 150;
             stroke-dashoffset: -76;
             stroke-width: 2px;
-            transition: stroke-dashoffset 0.2s, stroke-dasharray 0.2s;
+            transition: stroke-dashoffset var(--animation-duration), stroke-dasharray var(--animation-duration);
             &:hover {
                 stroke-width: 2px;
                 stroke-dashoffset: -15;

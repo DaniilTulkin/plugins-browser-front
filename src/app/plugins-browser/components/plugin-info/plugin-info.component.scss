@@ -1,0 +1,57 @@
+.container-1 {
+    width: 335px;
+    height: calc(100% - 10px);
+    padding: 5px;
+
+    background: white;
+    overflow-y: auto;
+    div:nth-child(1) {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: 'Urbanist-Bold'
+    }
+    div {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-family: 'Urbanist-Bold';
+        div {
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-family: 'Urbanist-Regular';
+        }
+    }
+    .container-1-1 {
+        textarea {
+            width: calc(100% - 10px);
+            height: 60px;
+            margin-top: 5px;
+    
+            border: 1px solid var(--gray);
+            border-radius: 5px;
+            resize: none;
+
+            font-size: 14px;
+            font-family: 'Urbanist-Regular';
+            &:focus{
+                outline: none;
+            }
+        }
+        button {
+            height: 30px;
+            padding: 0px 5px 0px 5px;
+
+            border: 0px;
+            border-radius: 10px;
+            background: var(--gray);
+
+            font-size: 14px;
+            font-family: 'Urbanist-Regular';
+            &:hover {
+                background: var(--gray-light);
+            }
+            &:active {
+                background: var(--gray);
+            }
+        }        
+    }
+}

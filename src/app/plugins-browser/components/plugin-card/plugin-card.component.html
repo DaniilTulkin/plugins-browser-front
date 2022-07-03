@@ -6,11 +6,12 @@
     <div class="container-1-2">
         <svg xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="90" height="30" rx="10"/>
-            <text class="text-regular" x="50%" y="50%">Run</text>
+            <text class="text-regular" x="50%" y="50%" dominant-baseline="middle">Run</text>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            (click)="emitPlugin()">
             <rect x="1" y="1" width="90" height="30" rx="10"/>
-            <text class="text-regular" x="50%" y="50%">Information</text>
+            <text class="text-regular" x="50%" y="50%" dominant-baseline="middle">Information</text>
         </svg>  
     </div>  
 </div>

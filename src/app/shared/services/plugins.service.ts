@@ -24,4 +24,8 @@ export class PluginsService {
   close() {
     this.wv2Service.postWebView2Message(EventsEnum.Close)
   }
+
+  minimize() {
+    this.wv2Service.postWebView2Message(EventsEnum.Minimize)
+  }
 }

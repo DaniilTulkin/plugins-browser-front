@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user-header.component.html',
   styleUrls: ['./user-header.component.scss']
 })
-export class UserHeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class UserHeaderComponent {
 
 }

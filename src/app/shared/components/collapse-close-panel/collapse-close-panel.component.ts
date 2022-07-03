@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PluginsService } from '../../services/plugins.service';
 
 @Component({
@@ -6,14 +6,7 @@ import { PluginsService } from '../../services/plugins.service';
   templateUrl: './collapse-close-panel.component.html',
   styleUrls: ['./collapse-close-panel.component.scss']
 })
-export class CollapseClosePanelComponent implements OnInit {
+export class CollapseClosePanelComponent {
 
-  constructor(private pluginsService: PluginsService) { }
-
-  ngOnInit(): void {
-  }
-
-  close() {
-    this.pluginsService.close();
-  }
+  constructor(public pluginsService: PluginsService) { }
 }

@@ -6,13 +6,15 @@ import { PluginCardComponent } from './components/plugin-card/plugin-card.compon
 import { PluginsBrowserComponent } from './plugins-browser.component';
 import { SharedModule } from '../shared/shared.module';
 import { UserHeaderComponent } from './components/user-header/user-header.component';
+import { PluginInfoComponent } from './components/plugin-info/plugin-info.component';
 
 
 @NgModule({
   declarations: [
     PluginsBrowserComponent,
     PluginCardComponent,
-    UserHeaderComponent
+    UserHeaderComponent,
+    PluginInfoComponent
   ],
   imports: [
     CommonModule,

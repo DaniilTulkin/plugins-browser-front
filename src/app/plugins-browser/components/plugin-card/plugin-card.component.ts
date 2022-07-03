@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Plugin } from '../../interfaces/plugin.interface';
 
 @Component({
@@ -6,13 +6,12 @@ import { Plugin } from '../../interfaces/plugin.interface';
   templateUrl: './plugin-card.component.html',
   styleUrls: ['./plugin-card.component.scss']
 })
-export class PluginCardComponent implements OnInit {
+export class PluginCardComponent {
 
   @Input() plugin: Plugin;
+  @Output() plugingEvent = new EventEmitter<Plugin>();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  emitPlugin() {
+    this.plugingEvent.emit(this.plugin);
   }
-
 }
