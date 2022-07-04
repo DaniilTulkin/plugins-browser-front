@@ -1,0 +1,111 @@
+body {
+    /* background: #ccc; */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  .graph-container {
+    position: relative;
+  }
+  .pointer-bubble {
+    position: relative;
+    left: 10.2em;
+    bottom: -3.5em;
+    opacity: 0.9;
+  }
+  .chart {
+    background: white;
+    width: 500px;
+    height: 200px;
+    border-left: 1px dotted #555;
+    border-bottom: 1px dotted #555;
+    padding: 20px 20px 20px 0;
+  }
+  .x-labels, .y-labels {
+    color: gray;
+    font-size: 0.7em;
+  }
+  .x-labels {
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .may6{
+    margin-left: 13em;
+  }
+  .may15 {
+    margin-left: 19em;
+  }
+  .y-labels {
+    position: relative;
+    bottom: 19em;
+    right: 64em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .y-label.spacer {
+    height: 8em;
+  }
+  #pointer {
+     width: 120px;
+     height: 80px;
+     background: red;
+     position: relative;
+     -moz-border-radius:    10px;
+     -webkit-border-radius: 10px;
+     border-radius:         10px;
+  }
+  #pointer:before {
+     content:"";
+     position: absolute;
+     right: 100%;
+     top: 26px;
+     width: 0;
+     height: 0;
+     border-top: 13px solid transparent;
+     border-right: 26px solid red;
+     border-bottom: 13px solid transparent;
+  }
+  .pointer {
+    color: #ffffff;
+  }
+  p#may9 {
+    margin: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+  }
+  p#viewer-count {
+    margin: 0.3em 0 0 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.9em;
+  }
+  .pointer-bubble {
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    width: 8em;
+    height: 2em;
+    padding: 10px;
+    color: #000;
+    background: #5b5b5b;
+  }
+  .pointer-bubble:after {
+    content:"";
+    position: absolute;
+    bottom: -10px;
+    left: 4em;
+    border-width: 10px 10px 0; /* vary these values to change the angle of the vertex */
+    border-style: solid;
+    border-color: #5b5b5b transparent;
+    display: block;
+    width:0;
+  }
+  

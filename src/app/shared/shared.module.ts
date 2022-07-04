@@ -5,24 +5,21 @@ import { CollapseClosePanelComponent } from './components/collapse-close-panel/c
 import { WebView2Service } from './services/webview2.service';
 import { PluginsService } from './services/plugins.service';
 import { LineChartModule } from './modules/charts/line-chart/line-chart.module';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    CollapseClosePanelComponent,
   ],
   providers: [
     WebView2Service,
     PluginsService
   ],
-  imports: [
-    CommonModule,
-    LineChartModule
-  ],
   exports: [
-    CollapseClosePanelComponent,
-    LineChartModule
+    CommonModule,
+    FormsModule,
+    LineChartModule,
   ]
 })
 export class SharedModule { }

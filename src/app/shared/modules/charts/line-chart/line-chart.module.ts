@@ -10,6 +10,9 @@ import { LineChartComponent } from './line-chart.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    LineChartComponent
   ]
 })
 export class LineChartModule { }

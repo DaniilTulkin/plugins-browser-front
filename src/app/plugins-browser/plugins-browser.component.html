@@ -1,26 +1,25 @@
-<div class="plugins-browser">
-    <div class="container-1">
-        <div class="container-1-1"
-            [ngStyle]="{'width': !(plugin$ | async) ? '100%' : '50%'}">
-            <app-user-header></app-user-header>
-            <input class="text-regular"
-                type="text"
-                placeholder="Search plugin">
-            <div class="container-1-1-1"
-                [ngStyle]="{'width': !(plugin$ | async) ? '81%' : '100%'}">
-                <div *ngFor="let plugin of plugins">
-                    <app-plugin-card
-                        (plugingEvent)="toggleInfo($event)"
-                        [plugin]="plugin">
-                    </app-plugin-card>
-                </div>
+<div class="container-1">
+    <div class="container-1-1"
+        [ngStyle]="{'width': !(plugin$ | async) ? '100%' : '50%'}">
+        <app-user-header></app-user-header>
+        <input class="text-regular"
+            type="text"
+            placeholder="Search plugin"
+            [(ngModel)]="searchText"
+            (input)="searchPlugin()">
+        <div class="container-1-1-1"
+            [ngStyle]="{'width': !(plugin$ | async) ? '81%' : '100%'}">
+            <div *ngFor="let plugin of sortedPlugins">
+                <app-plugin-card
+                    (plugingEvent)="toggleInfo($event)"
+                    [plugin]="plugin">
+                </app-plugin-card>
             </div>
         </div>
-        <div class="container-1-2"
-            *ngIf="plugin$ | async">
-            <app-plugin-info [plugin]="plugin$.value"></app-plugin-info>
-        </div>
     </div>
-    <app-collapse-close-panel></app-collapse-close-panel>
+    <div class="container-1-2"
+        *ngIf="plugin$ | async">
+        <app-plugin-info [plugin]="plugin$.value"></app-plugin-info>
+    </div>
 </div>
 

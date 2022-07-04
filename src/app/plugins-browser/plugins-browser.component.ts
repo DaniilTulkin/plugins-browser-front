@@ -67,17 +67,24 @@ export class PluginsBrowserComponent implements OnInit {
       dllName: "CreateSheets"
     }
   ];
+  sortedPlugins: Plugin[];
   plugin$: BehaviorSubject<Plugin> = new BehaviorSubject<Plugin>(null);
+  searchText: string;
 
-  constructor(private pluginsService: PluginsService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.pluginsService.resizeWindow("plugins-browser")
+  ngOnInit(): void {    
+    this.sortedPlugins = this.plugins;
   }
 
   toggleInfo(plugin: Plugin) {
     if (this.plugin$.value === plugin) 
       this.plugin$.next(null);
     else this.plugin$.next(plugin)
+  }
+
+  searchPlugin() {
+    this.sortedPlugins = this.plugins.filter((plugin: Plugin) => 
+      plugin.name.toLowerCase().includes(this.searchText.toLowerCase()))
   }
 }

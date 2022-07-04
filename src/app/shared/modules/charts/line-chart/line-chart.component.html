@@ -1,1 +1,32 @@
-<p>line-chart works!</p>
+<div class="graph-container">
+    <div class="pointer-bubble">
+      <p class="pointer" id="may9">Monday, May 9</p>
+      <p class="pointer" id="viewer-count">56 Viewers</p>
+    </div>
+    <div class="chart-box">
+      <svg viewBox="0 0 510 200" class="chart">
+       <!-- <defs>
+            <marker id="circle" markerWidth="4" markerHeight="4">
+                <circle cx="2" cy="2" r="2" stroke="none" fill="#3887cc"/>
+            </marker>
+        </defs> -->
+        <polyline 
+            fill="none"
+            stroke="#cad7e3"
+            stroke-width="2"
+            marker-start="none"
+            marker-end="none"
+            [attr.points]="'0, 0, 30, 105, 30, 105, 60, 72'"/>
+    </svg>
+    <div class="x-labels">
+        <div class="may1">May 1</div>
+        <div class="may6">May 6</div>
+        <div class="may15">May 15</div>
+    </div>
+      <div class="y-labels">
+        <div class="y-label fifty">50</div>
+        <div class="y-label spacer"></div>
+        <div class="y-label fifteen">15</div>
+      </div>
+    </div>
+  </div>
