@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  form: FormGroup;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.form = new FormGroup({
+      'email': new FormControl([Validators.email, Validators.required]),
+      'password': new FormControl([Validators.minLength(6), Validators.required])
+    });
   }
 
+  register() {
+
+  }
 }

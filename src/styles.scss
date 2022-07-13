@@ -44,13 +44,43 @@
     --gray-dark: #CCCCCC;
 
     --animation-duration: .2s;
-  }
+}
 
 body {
     margin: 0px;
     background: var(--gray-light);
     user-select: none;
     overflow: hidden;
+}
+
+label {
+    display: block;
+    font-family: "Urbanist-Regular";
+    font-size: 13px;
+}
+
+input[type="text"] {
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+
+    border: 0px;
+    background: #D9D9D9;
+    border-radius: 10px;
+
+    font-family: "Urbanist-Regular";
+    font-size: 14px;
+    &:focus{
+        outline: none;
+    }
+    &.small {
+        width: calc(100px - 10px);
+    }
+    &.medium {
+        width: calc(200px - 10px);
+    }
+    &.large {
+        width: calc(300px - 10px);
+    }
 }
 
 ::-webkit-scrollbar,

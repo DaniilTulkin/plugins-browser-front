@@ -2,7 +2,7 @@
     <div class="container-1-1"
         [ngStyle]="{'width': !(plugin$ | async) ? '100%' : '50%'}">
         <app-user-header></app-user-header>
-        <input class="text-regular"
+        <input class="medium"
             type="text"
             placeholder="Search plugin"
             [(ngModel)]="searchText"

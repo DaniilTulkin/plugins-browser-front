@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RoutersEnum } from '../../enums/routers.enum';
 import { PluginsService } from '../../services/plugins.service';
 
 @Component({
@@ -8,9 +10,11 @@ import { PluginsService } from '../../services/plugins.service';
 })
 export class CollapseClosePanelComponent implements OnInit{
 
-  constructor(public pluginsService: PluginsService) { }
+  constructor(public pluginsService: PluginsService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.pluginsService.resizeWindow("plugins-browser");
+    this.router.navigate([RoutersEnum.Registration]);
   }
 }

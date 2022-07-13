@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CollapseClosePanelComponent } from './components/collapse-close-panel/collapse-close-panel.component';
 import { WebView2Service } from './services/webview2.service';
 import { PluginsService } from './services/plugins.service';
 import { LineChartModule } from './modules/charts/line-chart/line-chart.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonsModule } from './buttons/buttons.module';
 
 
 
 @NgModule({
-  declarations: [
-  ],
   providers: [
     WebView2Service,
     PluginsService
@@ -19,7 +17,9 @@ import { FormsModule } from '@angular/forms';
   exports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     LineChartModule,
+    ButtonsModule
   ]
 })
 export class SharedModule { }
