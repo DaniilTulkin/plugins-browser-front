@@ -1,12 +1,12 @@
-<div>
-    <p>Registration</p>
-    <form [formGroup]="form"
-        (submit)="register()">
+<div class="container-1">
+    <p class="text-bold">Registration</p>
+    <form [formGroup]="form">
         <label for="email">Email</label>
-        <input class="small"
-            type="text"
+        <input class="large"
+            type="email"
             id="email"
-            placeholder="Enter your email">
+            placeholder="Enter your email"
+            formControlName="email">
         <label for="password"></label>
         <div>
             <span *ngIf="form.get('email').touched && form.get('email').invalid">
@@ -15,9 +15,11 @@
             </span>
         </div>
         <label for="password">Password</label>
-        <input type="text"
+        <input class="large"
+            type="password"
             id="password"
-            placeholder="Enter your password">
+            placeholder="Enter your password"
+            formControlName="password">
         <div>
             <span *ngIf="form.get('password').touched && form.get('password').invalid">
                 <span *ngIf="form.get('password').errors['required']">Password can't be empty</span>
@@ -26,12 +28,15 @@
         </div>
     </form>
     <app-button-oval-large
+        style="margin-top: 10px;"
         [text]="'Register'"
-        [stroke]="'--green'">
+        [stroke]="'--green'"
+        onclick="register()">
     </app-button-oval-large>
-    <p>
+    <p class="text-regular">
         Already have an account?
-        <a>
+        <a style="color: var(--blue);"
+            [routerLink]="['../' + routes.Login]">
             Log in!
         </a>
     </p>

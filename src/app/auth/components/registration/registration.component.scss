@@ -1,0 +1,29 @@
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    .text-bold {
+        margin: 0px 0px 10px 0px;
+    }
+    div {
+        height: 20px;
+
+        font-family: "Urbanist-Medium";
+        font-size: 13px;
+        color: var(--red);
+        span {
+            width: 100%;
+            word-break: normal;
+            position: absolute;
+        }
+    }
+    .text-regular {
+        margin: 0px;
+        a {
+            text-decoration: none;
+        }
+    }
+}

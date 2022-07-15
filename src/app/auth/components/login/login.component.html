@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div class="container-1">
+    <p class="text-bold">Enter into system</p>
+    <form [formGroup]="form">
+        <label for="email">Email</label>
+        <input class="large"
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            formControlName="email">
+        <label for="password"></label>
+        <div>
+            <span *ngIf="form.get('email').touched && form.get('email').invalid">
+                <span *ngIf="form.get('email').errors['required']">Email can't be empty</span>
+                <span *ngIf="form.get('email').errors['email']">Email isn't correct</span>
+            </span>
+        </div>
+        <label for="password">Password</label>
+        <input class="large"
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            formControlName="password">
+        <div>
+            <span *ngIf="form.get('password').touched && form.get('password').invalid">
+                <span *ngIf="form.get('password').errors['required']">Password can't be empty</span>
+                <span *ngIf="form.get('password').errors['minlength']">Password must be more than 6 symbols</span>
+            </span>
+        </div>
+    </form>
+    <app-button-oval-large
+        style="margin-top: 10px;"
+        [text]="'Register'"
+        [stroke]="'--green'"
+        onclick="login()">
+    </app-button-oval-large>
+    <p class="text-regular">
+        Don't have an account yet?
+        <a style="color: var(--blue);"
+            [routerLink]="['../' + routes.Registration]">
+            Registr!
+        </a>
+    </p>
+</div>
