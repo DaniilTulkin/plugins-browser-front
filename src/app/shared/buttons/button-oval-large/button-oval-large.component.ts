@@ -9,4 +9,5 @@ export class ButtonOvalLargeComponent {
   
   @Input() text: string;
   @Input() stroke: string;
+  @Input() disabled: boolean;
 }

@@ -1,5 +1,5 @@
 export enum RoutersEnum {
-    PluginsBrowser = "pluginsBrowser",
+    PluginsBrowser = "plugins-browser",
     Login = "login",
-    Registration = "registration"
+    Registration = "register"
 }

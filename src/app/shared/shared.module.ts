@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { WebView2Service } from './services/webview2.service';
 import { PluginsService } from './services/plugins.service';
@@ -18,6 +19,7 @@ import { ButtonsModule } from './buttons/buttons.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     LineChartModule,
     ButtonsModule
   ]

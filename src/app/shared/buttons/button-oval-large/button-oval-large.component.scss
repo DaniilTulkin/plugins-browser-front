@@ -24,19 +24,8 @@ svg {
             fill: #EBEBEB;
         }
     }
-    &.disable {
-        rect {
-            fill: #EBEBEB;
-        }
-        &:hover {
-            rect {
-                fill: #EBEBEB;
-            }
-        }
-        &:active {
-            rect {
-                fill: #EBEBEB;
-            }
-        }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
     }
 }

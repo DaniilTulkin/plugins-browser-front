@@ -6,7 +6,8 @@
             type="email"
             id="email"
             placeholder="Enter your email"
-            formControlName="email">
+            formControlName="email"
+            [ngClass]="{'required': form.get('email').touched && form.get('email').invalid}">
         <label for="password"></label>
         <div>
             <span *ngIf="form.get('email').touched && form.get('email').invalid">
@@ -19,7 +20,8 @@
             type="password"
             id="password"
             placeholder="Enter your password"
-            formControlName="password">
+            formControlName="password"
+            [ngClass]="{'required': form.get('password').touched && form.get('password').invalid}">
         <div>
             <span *ngIf="form.get('password').touched && form.get('password').invalid">
                 <span *ngIf="form.get('password').errors['required']">Password can't be empty</span>
@@ -29,15 +31,16 @@
     </form>
     <app-button-oval-large
         style="margin-top: 10px;"
-        [text]="'Register'"
+        [text]="'Login'"
         [stroke]="'--green'"
-        onclick="login()">
+        (click)="!form.invalid ? login() : null"
+        [disabled]="form.invalid">
     </app-button-oval-large>
     <p class="text-regular">
         Don't have an account yet?
         <a style="color: var(--blue);"
             [routerLink]="['../' + routes.Registration]">
-            Registr!
+            Register!
         </a>
     </p>
 </div>

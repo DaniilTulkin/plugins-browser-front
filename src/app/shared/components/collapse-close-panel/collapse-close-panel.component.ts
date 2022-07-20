@@ -15,6 +15,6 @@ export class CollapseClosePanelComponent implements OnInit{
 
   ngOnInit(): void {
     this.pluginsService.resizeWindow("plugins-browser");
-    this.router.navigate([RoutersEnum.Login]);
+    this.router.navigateByUrl(RoutersEnum.Login);
   }
 }

@@ -9,4 +9,5 @@ export class ButtonOvalMediumComponent {
 
   @Input() text: string;
   @Input() stroke: string;
+  @Input() disabled: boolean;
 }

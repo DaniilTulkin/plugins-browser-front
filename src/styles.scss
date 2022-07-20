@@ -81,6 +81,9 @@ input {
     &.large {
         width: calc(300px - 10px);
     }
+    &.required {
+        box-shadow: inset 0 0 0 2px var(--red);
+    }
 }
 
 ::-webkit-scrollbar,
