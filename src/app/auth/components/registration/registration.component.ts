@@ -31,7 +31,7 @@ export class RegistrationComponent implements OnInit {
       .subscribe({
         next: (res: any) => {
           console.log(res.message);
-          this.router.navigateByUrl(`/${RoutersEnum.Login}`);
+          this.router.navigateByUrl(`/${RoutersEnum.Auth}`);
         }
       });
   }

@@ -6,8 +6,9 @@
         </div>
         <div class="text-bold container-1-1-1">
             Hello,&nbsp;
-            <span>User!</span>
-            <svg xmlns="http://www.w3.org/2000/svg">
+            <span>{{tokenService.getUser()}}</span>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                (click)="authService.logout()">
                 <circle cx="11" cy="11" r="10" />
             </svg>
         </div>

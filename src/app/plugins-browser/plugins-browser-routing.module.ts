@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { RoutersEnum } from '../shared/enums/routers.enum';
+import { AuthGuard } from '../shared/guards/auth.guard';
 import { PluginsBrowserComponent } from './plugins-browser.component';
 
 const routes: Routes = [
-  {path: RoutersEnum.PluginsBrowser, component: PluginsBrowserComponent}
+  {path: '', component: PluginsBrowserComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
