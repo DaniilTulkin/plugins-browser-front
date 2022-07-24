@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-import { PluginsService } from 'src/app/shared/services/plugins.service';
 import { Plugin } from './interfaces/plugin.interface';
+import { PluginsWindowService } from '../shared/services/plugin-window.service';
 
 @Component({
   selector: 'app-plugins-browser',
@@ -71,9 +71,10 @@ export class PluginsBrowserComponent implements OnInit {
   plugin$: BehaviorSubject<Plugin> = new BehaviorSubject<Plugin>(null);
   searchText: string;
 
-  constructor() { }
+  constructor(private pluginsWindowService: PluginsWindowService) { }
 
   ngOnInit(): void {    
+    this.pluginsWindowService.resizeWindow("plugins-browser");
     this.sortedPlugins = this.plugins;
   }
 

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { WebView2Service } from './services/webview2.service';
-import { PluginsService } from './services/plugins.service';
+import { PluginsWindowService } from './services/plugin-window.service';
 import { LineChartModule } from './modules/charts/line-chart/line-chart.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from './buttons/buttons.module';
@@ -13,7 +13,7 @@ import { ButtonsModule } from './buttons/buttons.module';
 @NgModule({
   providers: [
     WebView2Service,
-    PluginsService
+    PluginsWindowService
   ],
   exports: [
     CommonModule,

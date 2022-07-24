@@ -21,8 +21,8 @@ export class AuthService {
     )
   }
 
-  register(email:string, password:string ) {
-    return this.http.post(`/api/auth/${RoutersEnum.Registration}`, {email, password});
+  register(login: string, email:string, password:string ) {
+    return this.http.post(`/api/auth/${RoutersEnum.Registration}`, {login, email, password});
   }
 
   logout(): void {

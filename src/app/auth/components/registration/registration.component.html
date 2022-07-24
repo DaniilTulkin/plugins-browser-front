@@ -1,6 +1,18 @@
 <div class="container-1">
     <p class="text-bold">Registration</p>
     <form [formGroup]="form">
+        <label for="login">Login</label>
+        <input class="large"
+            id="login"
+            placeholder="Enter your login"
+            formControlName="login"
+            [ngClass]="{'required': form.get('login').touched && form.get('login').invalid}">
+        <div>
+            <span *ngIf="form.get('login').touched && form.get('login').invalid">
+                <span *ngIf="form.get('login').errors['required']">Login can't be empty</span>
+                <span *ngIf="form.get('login').errors['minlength']">Login must be more than 3 symbols</span>
+            </span>
+        </div>
         <label for="email">Email</label>
         <input class="large"
             type="email"
@@ -8,7 +20,6 @@
             placeholder="Enter your email"
             formControlName="email"
             [ngClass]="{'required': form.get('email').touched && form.get('email').invalid}">
-        <label for="password"></label>
         <div>
             <span *ngIf="form.get('email').touched && form.get('email').invalid">
                 <span *ngIf="form.get('email').errors['required']">Email can't be empty</span>

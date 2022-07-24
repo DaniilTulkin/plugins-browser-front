@@ -1,8 +1,10 @@
 .container-1 {
-    width: 335px;
+    width: calc(100% - 15px);
     height: calc(100% - 10px);
     padding: 5px;
+    margin-right: 5px;
 
+    border-radius: 5px;
     background: white;
     overflow-y: auto;
     div:nth-child(1) {

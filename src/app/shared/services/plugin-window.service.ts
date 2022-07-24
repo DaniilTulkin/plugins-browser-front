@@ -6,13 +6,13 @@ import { WebView2Service } from './webview2.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PluginsService {
+export class PluginsWindowService {
 
   constructor(private wv2Service: WebView2Service) {}
 
-  resizeWindow(pluginName: string) {
-    const height = document.getElementsByClassName(pluginName)[0].clientHeight;
-    const width = document.getElementsByClassName(pluginName)[0].clientWidth;
+  resizeWindow(className: string) {
+    const height = document.getElementsByClassName(className)[0].clientHeight;
+    const width = document.getElementsByClassName(className)[0].clientWidth;
     const windowSize = {
         height: height,
         width: width

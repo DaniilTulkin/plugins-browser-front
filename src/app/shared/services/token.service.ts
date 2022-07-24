@@ -8,30 +8,30 @@ const USER_KEY = 'auth-user'
 })
 export class TokenService {
 
-  sessionStorage: Storage = window.sessionStorage;
+  storage: Storage = window.localStorage;
 
   constructor() { }
 
   clearStorage(): void {
-    sessionStorage.clear();
+    this.storage.clear();
   }
 
   saveToken(token: string): void {
-    sessionStorage.removeItem(TOKEN_KEY);
-    sessionStorage.setItem(TOKEN_KEY, token);
+    this.storage.removeItem(TOKEN_KEY);
+    this.storage.setItem(TOKEN_KEY, token);
   }
 
   getToken(): string | null {
-    return sessionStorage.getItem(TOKEN_KEY);
+    return this.storage.getItem(TOKEN_KEY);
   }
 
   saveUser(user: any): void {
-    sessionStorage.removeItem(USER_KEY);
-    sessionStorage.setItem(USER_KEY, JSON.stringify(user));
+    this.storage.removeItem(USER_KEY);
+    this.storage.setItem(USER_KEY, JSON.stringify(user));
   }
 
   getUser(): any {
-    const user = sessionStorage.getItem(USER_KEY);
+    const user = this.storage.getItem(USER_KEY);
     if (user) {
       return JSON.parse(user);
     }
